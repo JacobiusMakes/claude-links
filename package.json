@@ -1,0 +1,12 @@
+{
+  "name": "claude-links",
+  "version": "1.0.0",
+  "description": "Clickable file links in any terminal. Local server turns file paths into cmd-clickable URLs.",
+  "type": "module",
+  "bin": {
+    "claude-links": "./server.js"
+  },
+  "keywords": ["claude", "claude-code", "terminal", "links", "file-open", "clickable"],
+  "author": "JacobiusMakes",
+  "license": "MIT"
+}
