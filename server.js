@@ -13,7 +13,7 @@
  */
 
 import { createServer } from 'http';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import { existsSync, writeFileSync, readFileSync, unlinkSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
@@ -68,7 +68,7 @@ const server = createServer((req, res) => {
     }
 
     try {
-      execSync(`open "${filePath.replace(/"/g, '\\"')}"`);
+      execFileSync('open', [filePath]);
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(`<html><body style="font-family:system-ui;padding:40px">
         <h2 style="color:#2d7d46">Opened</h2>
@@ -90,7 +90,7 @@ const server = createServer((req, res) => {
       return;
     }
     try {
-      execSync(`open -R "${filePath.replace(/"/g, '\\"')}"`);
+      execFileSync('open', ['-R', filePath]);
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(`<html><body style="font-family:system-ui;padding:40px">
         <h2 style="color:#2d7d46">Revealed in Finder</h2>

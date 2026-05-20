@@ -1,6 +1,6 @@
 {
   "name": "claude-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Clickable file links in any terminal. Local server turns file paths into cmd-clickable URLs.",
   "type": "module",
   "bin": {
